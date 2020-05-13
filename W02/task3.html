@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>W02: Task3</title>
+  </head>
+  <body>
+      v0:
+      <input type="number" id="x0" value=""/>
+      <input type="number" id="y0" value=""/>
+      <input type="number" id="z0" value=""/><br>
+      v1:
+      <input type="number" id="x1" value=""/>
+      <input type="number" id="y1" value=""/>
+      <input type="number" id="z1" value=""/><br>
+      v2:
+      <input type="number" id="x2" value=""/>
+      <input type="number" id="y2" value=""/>
+      <input type="number" id="z2" value=""/><br>
+      
+      <input type="button" value="入力" onclick="clickBtn()">
+
+    
+ 
+    <!-- <input type="button"
+      onclick="e()"
+      value="Click Me"/> -->
+    
+    <script src="vec3.js"></script>
+    <script>
+      /* var x0, y0, z0; // (input vertex 0)
+      var x1, y1, z1; // (input vertex 1)
+      var x2, y2, z2; // (input vertex 2) */
+      function clickBtn()
+      {
+        var x0 = document.getElementById("x0").value;
+        var y0 = document.getElementById("y0").value;
+        var z0 = document.getElementById("z0").value;
+        var x1 = document.getElementById("x1").value;
+        var y1 = document.getElementById("y1").value;
+        var z1 = document.getElementById("z1").value;
+        var x2 = document.getElementById("x2").value;
+        var y2 = document.getElementById("y2").value;
+        var z2 = document.getElementById("z2").value;
+        function AreaOfTriangle( v0, v1, v2 )
+        {
+          var a = new Vec3( v1.x - v0.x, v1.y - v0.y, v1.z - v0.z );
+          var b = new Vec3( v2.x - v0.x, v2.y - v0.y, v2.z - v0.z );
+          var s = Math.sqrt(Math.pow( a.y*b.z - a.z*a.y, 2 ) + Math.pow( a.z*b.x - a.x*a.z, 2 ) + Math.pow( a.x*b.y - a.y*a.x, 2 )) / 2;
+          return s;
+        }
+
+        /* var x0, y0, z0;
+        var x1, y1, z1;
+        var x2, y2, z2; */
+        var v0 = new Vec3( x0, y0, z0 );
+        var v1 = new Vec3( x1, y1, z1 );
+        var v2 = new Vec3( x2, y2, z2 );
+
+        var S = AreaOfTriangle( v0, v1, v2 );
+        document.write( "答え：" + S );
+      }
+
+      
+    </script>
+  </body>
+</html>
