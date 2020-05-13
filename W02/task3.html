@@ -44,7 +44,7 @@
         {
           var a = new Vec3( v1.x - v0.x, v1.y - v0.y, v1.z - v0.z );
           var b = new Vec3( v2.x - v0.x, v2.y - v0.y, v2.z - v0.z );
-          var s = Math.sqrt(Math.pow( a.y*b.z - a.z*a.y, 2 ) + Math.pow( a.z*b.x - a.x*a.z, 2 ) + Math.pow( a.x*b.y - a.y*a.x, 2 )) / 2;
+          var s = Math.sqrt(Math.pow( a.y*b.z - a.z*b.y, 2 ) + Math.pow( a.z*b.x - a.x*b.z, 2 ) + Math.pow( a.x*b.y - a.y*b.x, 2 )) / 2;
           return s;
         }
 
