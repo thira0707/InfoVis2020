@@ -73,7 +73,6 @@ function main() {
 		geometry.faces.push(face);
 	}
 
-
 	// Assign colors for each vertex
 	material.vertexColors = THREE.VertexColors;
 	for (var i = 0; i < nfaces; i++) {
